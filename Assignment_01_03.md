@@ -135,7 +135,7 @@ yang masih hidup setelah 500 jam?
 
 Jawablah pertanyaan tersebut dengan membuat program Python.
 Gunakan variabel `jumlah_bakteri_hidup`, variabel `jumlah_bakteri_meninggal` dan variabel `waktu`.
-```
+
 ### Answer
 ```
 print(" *Program Tahun Kabisat* ")
