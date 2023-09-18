@@ -201,6 +201,7 @@ while n <= r:
         print(f"Total Bakteri = ", "{:,}".format(jumlah_bakteri))
         print("--")
     n = n + 1
-    ```
+    
+```
 
-    ![image](P6.png)
+![image](P6.png)
