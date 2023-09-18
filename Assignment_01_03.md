@@ -24,12 +24,13 @@ Menggunakan perintah `print()` dalam Python, tuliskan program
 Python untuk mencetak tulisan ITK di atas.
 
 ### Answer
-
+```
 print("=====    =====    =   =")
 print("  =        =      =  =")
 print("  =        =      = = ")
 print("  =        =      =  =")
 print("=====      =      =   =")
+```
 
 ## Problem 2
 Diberikan suatu bilangan bulat `n`, buatlah _flowchart_ untuk perintah berikut
@@ -42,6 +43,7 @@ Diberikan suatu bilangan bulat `n`, buatlah _flowchart_ untuk perintah berikut
 
 ### Answer
 
+```
 n = int(input("Masukkan sebuah bilangan: "))
 if n % 2 == 1:
     print("Aneh")
@@ -53,6 +55,7 @@ elif n > 20:
     print("Tidak Aneh")
 else:
     print("Input Tidak Valid")
+```
 
 ![image](P2.png)
 
@@ -74,7 +77,7 @@ b = int(input("Masukkan angka kedua"))
 Tampilkan juga tiga contoh _test cases_ masukan `a` dan `b`
 
 ### Answer
-
+```
 a = int(input("Masukkan angka pertama: "))
 b = int(input("Masukkan angka kedua: "))
 
@@ -91,6 +94,7 @@ kali = a * b
 print(f"Jumlah dari dua angka tersebut adalah: {jumlah}")
 print(f"Selisih dari dua angka tersebut adalah: {selisih}")
 print(f"Hasil kali dari dua angka tersebut adalah: {kali}")
+```
 
 ![image](P3_1.png)
 
@@ -108,6 +112,7 @@ Gunakan variabel `jumlah_bakteri` dan variabel `waktu`.
 
 ### Answer
 
+```
 # Jumlah bakteri awal 
 jumlah_bakteri = 100
 
@@ -121,6 +126,7 @@ jumlah_pembelahan = waktu / 20
 jumlah_bakteri_setelah_satu_hari = jumlah_bakteri * (2 ** jumlah_pembelahan)
 
 print(f"Jumlah bakteri setelah satu hari: {jumlah_bakteri_setelah_satu_hari}")
+```
 
 ## Problem 5
 Masih mengacu pada Problem (4). Jika bakteri _Bacillus cereus_ 
@@ -129,9 +135,9 @@ yang masih hidup setelah 500 jam?
 
 Jawablah pertanyaan tersebut dengan membuat program Python.
 Gunakan variabel `jumlah_bakteri_hidup`, variabel `jumlah_bakteri_meninggal` dan variabel `waktu`.
-
+```
 ### Answer
-
+```
 print(" *Program Tahun Kabisat* ")
 
 def tahun_kabisat(tahun):
@@ -146,6 +152,7 @@ if tahun_kabisat(tahun):
     print(f"{tahun} adalah Tahun Kabisat.")
 else:
     print(f"{tahun} bukan Tahun Kabisat.")
+```
 
 ## Problem 6
 Satu hari akan ditambahkan pada kalender hampir tiap empat tahun sekali
@@ -170,6 +177,7 @@ Ujilah program dengan tahun-tahun berikut: 2024, 2023, 2000, 1900.
 
 ### Answer
 
+```
 bakteri = 100
 waktu = 20
 satu_hari = 72
@@ -193,5 +201,6 @@ while n <= r:
         print(f"Total Bakteri = ", "{:,}".format(jumlah_bakteri))
         print("--")
     n = n + 1
+    ```
 
     ![image](P6.png)
