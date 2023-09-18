@@ -25,11 +25,11 @@ Python untuk mencetak tulisan ITK di atas.
 
 ### Answer
 
-print("=====    =====    =   =")
+``` print("=====    =====    =   =")
 print("  =        =      =  =")
 print("  =        =      = = ")
 print("  =        =      =  =")
-print("=====      =      =   =")
+print("=====      =      =   =")``` 
 
 ## Problem 2
 Diberikan suatu bilangan bulat `n`, buatlah _flowchart_ untuk perintah berikut
@@ -42,7 +42,7 @@ Diberikan suatu bilangan bulat `n`, buatlah _flowchart_ untuk perintah berikut
 
 ### Answer
 
-n = int(input("Masukkan sebuah bilangan: "))
+``` n = int(input("Masukkan sebuah bilangan: "))
 if n % 2 == 1:
     print("Aneh")
 elif 2 <= n <= 5:
@@ -52,7 +52,7 @@ elif 6 <= n <= 20:
 elif n > 20:
     print("Tidak Aneh")
 else:
-    print("Input Tidak Valid")
+    print("Input Tidak Valid")``` 
 
 ![image](P2.png)
 
@@ -75,7 +75,7 @@ Tampilkan juga tiga contoh _test cases_ masukan `a` dan `b`
 
 ### Answer
 
-a = int(input("Masukkan angka pertama: "))
+``` a = int(input("Masukkan angka pertama: "))
 b = int(input("Masukkan angka kedua: "))
 
 # Jumlah dari dua angka
@@ -90,7 +90,7 @@ kali = a * b
 # Mencetak hasil
 print(f"Jumlah dari dua angka tersebut adalah: {jumlah}")
 print(f"Selisih dari dua angka tersebut adalah: {selisih}")
-print(f"Hasil kali dari dua angka tersebut adalah: {kali}")
+print(f"Hasil kali dari dua angka tersebut adalah: {kali}")``` 
 
 ![image](P3_1.png)
 
@@ -108,7 +108,7 @@ Gunakan variabel `jumlah_bakteri` dan variabel `waktu`.
 
 ### Answer
 
-# Jumlah bakteri awal 
+``` # Jumlah bakteri awal 
 jumlah_bakteri = 100
 
 # Waktu dalam menit
@@ -120,7 +120,7 @@ jumlah_pembelahan = waktu / 20
 # Menghitung jumlah bakteri setelah satu hari
 jumlah_bakteri_setelah_satu_hari = jumlah_bakteri * (2 ** jumlah_pembelahan)
 
-print(f"Jumlah bakteri setelah satu hari: {jumlah_bakteri_setelah_satu_hari}")
+print(f"Jumlah bakteri setelah satu hari: {jumlah_bakteri_setelah_satu_hari}")``` 
 
 ## Problem 5
 Masih mengacu pada Problem (4). Jika bakteri _Bacillus cereus_ 
@@ -132,7 +132,7 @@ Gunakan variabel `jumlah_bakteri_hidup`, variabel `jumlah_bakteri_meninggal` dan
 
 ### Answer
 
-print(" *Program Tahun Kabisat* ")
+``` print(" *Program Tahun Kabisat* ")
 
 def tahun_kabisat(tahun):
     if (tahun % 4 == 0 and tahun % 100 != 0) or (tahun % 400 == 0):
@@ -145,7 +145,7 @@ tahun = int(input("Masukkan tahun: "))
 if tahun_kabisat(tahun):
     print(f"{tahun} adalah Tahun Kabisat.")
 else:
-    print(f"{tahun} bukan Tahun Kabisat.")
+    print(f"{tahun} bukan Tahun Kabisat.")``` 
 
 ## Problem 6
 Satu hari akan ditambahkan pada kalender hampir tiap empat tahun sekali
@@ -170,7 +170,7 @@ Ujilah program dengan tahun-tahun berikut: 2024, 2023, 2000, 1900.
 
 ### Answer
 
-bakteri = 100
+``` bakteri = 100
 waktu = 20
 satu_hari = 72
 # untuk 500 jam (500 * 60 menit)
@@ -194,4 +194,4 @@ while n <= r:
         print("--")
     n = n + 1
 
-    ![image](P6.png)
+    ![image](P6.png)``` 
