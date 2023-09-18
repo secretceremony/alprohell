@@ -192,6 +192,6 @@ while n <= r:
         print(f"Kematian ke {y+1} = ", "{:,}".format(kematian))
         print(f"Total Bakteri = ", "{:,}".format(jumlah_bakteri))
         print("--")
-    n = n + 1
+    n = n + 1``` 
 
-    ![image](P6.png)``` 
+    ![image](P6.png)
