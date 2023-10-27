@@ -217,7 +217,7 @@ print("ASCII art saved to 'fig_moai.txt'")
 [Click here to see the file (fig_moai.txt)](fig_moai.txt)
 
 Output:
-![image](1.png)
+![image](3.png)
 
 ## Problem 4: Calculating the mean of datetime
 
