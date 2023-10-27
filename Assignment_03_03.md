@@ -138,10 +138,14 @@ neck_size = tuple(map(int, input("Masukkan ukuran leher (tinggi lebar): ").split
 
 draw_moai(vert_chars, hor_char, head_size, eye_size, neck_size)
 ```
+Note: saat result problem 2 di*run* spesifikasi yang digunakan adalah:
+- head: 1 8
+- eyes: 1 2
+- neck: 1 8
 
 ## Problem 3: Moai ASCII art 3
 Simpan atau tulis keluaran dari fungsi di Problem 2 ke dalam file.
-`fig_moai.txt`.
+`fig:_moai.txt`.
 
 ### Answer
 ```py
@@ -211,6 +215,9 @@ with open('fig_moai.txt', 'w') as file:
 print("ASCII art saved to 'fig_moai.txt'")
 ```
 [Click here to see the file (fig_moai.txt)](fig_moai.txt)
+
+Output:
+![image](1.png)
 
 ## Problem 4: Calculating the mean of datetime
 
@@ -299,7 +306,27 @@ Menggunakan aturan _decryption_ berikut:
 Tentukan pesan rahasia yang ada di dalam `secret.txt`
 
 ### Answer
+```py
+with open('secret.txt', 'r') as file:
+    message = file.read()
 
+# replaces all occurrences of the character 'a' with a space ' ' in the message.
+a_count = message.count('a')
+message = message.replace('a', ' ')
+
+# t replaces all occurrences of the character 'b' with a newline character '\n' 
+message = message.replace('b', '\n')
+
+# It removes all occurrences of the character 'c' 
+message = message.replace('c', '')
+
+print(message)
+```
+
+Berikut adalah output secret.txt setelah di decode:
+![image](5.png)
+
+(Habis nugas saya mabuk patung moai pak)
 
 ## Problem 6: Read histogram data
 Bacalah data dari file `inventory_table.txt` berikut
