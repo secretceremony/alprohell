@@ -370,3 +370,6 @@ for item, count in inventory_data.items():
 
     print(f"{item}: {count}")
 ```
+
+Output:
+![image](6.png)
