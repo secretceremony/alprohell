@@ -323,7 +323,7 @@ message = message.replace('c', '')
 print(message)
 ```
 
-Berikut adalah output secret.txt setelah di decode:
+Berikut adalah output secret.txt setelah di decode:<br>
 ![image](5.png)
 
 (Habis nugas saya mabuk patung moai pak)
