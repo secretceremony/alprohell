@@ -49,7 +49,6 @@ print("Ukuran array gambar:", image_array.shape)
 ### Explanation
 Kode tersebut menggunakan Matplotlib dan NumPy untuk membaca gambar dari berkas dan mengembalikan gambar sebagai array tiga dimensi. Fungsi read_image menerima nama file gambar sebagai input, membaca file tersebut menggunakan Matplotlib, dan mengembalikan array yang merepresentasikan gambar. Kemudian, kode menampilkan ukuran array gambar yang telah dibaca.
 
-
 ## Problem 2: Moai Converter: Get Moai image pixels 
 Ambil salah satu _channel_ dari hasil Problem 1, misal channel _Red_, ubah
 ke dalam skala nilai 0 dan 1 dengan cara membagi nilai di dalam list dengan 255.
@@ -83,11 +82,12 @@ def read_image(filename):
 def image_to_ascii(filename):
     """
     Mengambil salah satu channel dari gambar, misalnya channel merah.
-    nilai dalam channel tersebut diubah ke skala nilai antara 0 dan 1, dengan membaginya dengan 225
+    nilai dalam channel tersebut diubah ke skala nilai antara 0 dan 1,
+    dengan membaginya dengan 225
     """
     arr_moai = read_image(filename)
 
-    arr_moai_red_channel = arr_moai[1, 1, 0]
+    arr_moai_red_channel = arr_moai[:, :, 0]
     arr_moai_red_channel = arr_moai_red_channel / 225.0
 
     return arr_moai_red_channel
@@ -125,7 +125,6 @@ nilai pixel pada `arr_moai_red_channel_scaled`
 char_bin = [0., 0.3, 0.5, 0.6, 0.9, 1.]
 ```
 
-
 ```py
 def image_to_ascii(filename):
   arr_moai = read_image(filename)
@@ -151,8 +150,70 @@ Lengkapi fungsi diatas untuk mendapatkan hasil konversi gambar berupa karakter
 ASCII.
 
 ### Answer
+```py
+import matplotlib.pyplot as plt
+import numpy as np
+from skimage.transform import resize
 
+def read_image(filename):
+    """
+    Membaca berkas gambar dan mengembalikan array tiga dimensi.
 
+    Parameters:
+    - filename (str): Nama gambar:
+
+    Returns:
+    - image_array (numpy.ndarray): Array tiga dimensi yang mewakili gambar.
+    """
+    # Read the image file using Matplotlib and return the three-dimensional array representing the image
+    image_array = plt.imread(filename)
+    return image_array
+
+def image_to_ascii(filename):
+    """
+    Mengambil salah satu channel dari gambar, misalnya channel merah.
+    nilai dalam channel tersebut diubah ke skala nilai antara 0 dan 1,
+    dengan membaginya dengan 225
+    """
+    # Read the image using the read_image function
+    arr_moai = read_image(filename)
+
+    # Extract the red channel and normalize its values between 0 and 1
+    arr_moai_red_channel = arr_moai[:, :, 0]
+    arr_moai_red_channel_scaled = arr_moai_red_channel / 225.0
+
+    # Define brightness levels for ASCII conversion
+    char_bin = [0.0, 0.3, 0.5, 0.6, 0.9, 1.0]
+
+    arr_moai_ascii = []
+    char_bright_normal2 = ". : ; x"
+
+    # Convert pixel values to ASCII characters based on brightness levels
+    for row in arr_moai_red_channel_scaled:
+        row_ascii = [char_bright_normal2[np.digitize(pixel, char_bin)] for pixel in row]
+        arr_moai_ascii.append("".join(row_ascii))
+        
+    output_shape = (50, 100)
+
+    # Resize the ASCII art to the desired output shape
+    arr_moai_ascii_resized = resize(np.array(arr_moai_ascii), output_shape, anti_aliasing=True)
+
+    # Join the resized ASCII art lines to form the final result
+    result_ascii = "\n".join(arr_moai_ascii_resized)
+
+    return result_ascii
+
+filename = "images.jpeg"
+result = image_to_ascii(filename)
+print(result)
+```
+
+### Explanation
+Kode tersebut menggunakan Matplotlib untuk membaca gambar, NumPy untuk manipulasi data array, dan fungsi resize dari skimage.transform untuk mengubah ukuran gambar ASCII.
+
+Fungsi read_image digunakan untuk membaca gambar dan mengembalikan array yang merepresentasikan gambar tersebut. Sedangkan fungsi image_to_ascii mengambil gambar, mengekstrak saluran warna merah, dan mengonversinya menjadi seni ASCII. Setelah itu, seni ASCII diubah ukurannya sesuai kebutuhan dan hasil akhirnya dicetak.
+
+Kode tersebut menggabungkan beberapa fungsi untuk menghasilkan seni ASCII dari gambar yang diberikan.
 
 ## Problem 4: Moai Converter: Create baseline program
 Pada bagian ini akan diberikan program dasar sebagai berikut dan beberapa
